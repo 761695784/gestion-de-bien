@@ -10,7 +10,7 @@
 
     <div class="container text-center">
             <h1>Hello, world!</h1> <hr>
-            <a href="#" class="btn btn-primary">Ajouter un bien</a><hr>
+            <a href="/ajouter" class="btn btn-primary">Ajouter un bien</a><hr>
             @if (session('status'))
             <div class="alert alert-success">
                 {{session('status')}}
@@ -24,15 +24,16 @@
                         <img src="{{asset ($bien->image)}}" class="card-img-top" alt="bien one">
                         <div class="card-body">
                             <h5 class="card-title" >{{$bien->nom}}</h5>
-                            <h6 class="card-title"   style="color: rgb(233, 168, 28)"  ><u><strong>Catégorie</strong></u>{{$bien->categorie}}</h6>
+                            <h6 class="card-title"   style="color: rgb(233, 168, 28)"><u><strong>Catégorie</strong></u>  {{$bien->categorie}}</h6>
                             <p class="card-text" style="color: blue"><u><strong>Adresse</strong></u> : {{$bien->adresse}} </p>
                             <p class="card-text" style="color: green"><u><strong>Publié le</strong></u> : {{$bien->DatePubli}} </p>
-                            @if($bien->statut)
-                            <span class="badge bg-success">Occupé</span><hr>
-                        @endif   
+                          
                             <p class="card-text">{{ substr($bien->description, 0,100) }}</p>
                             {{-- {{ route('details', $bien->id) }} --}}
-                        <a href="#" class="btn btn-info">Voir plus</a>                           
+                        <a href="#" class="btn btn-info">Voir plus</a> <br> 
+                        @if($bien->statut)
+                        <span class="badge bg-success">Occupé</span>
+                    @endif            
                             <hr>
                             <a href="modifier_bien/{{$bien->id}}" class="btn btn-warning">Modifier</a>
                             <a href="supprimer_bien/{{$bien->id}}" class="btn btn-danger">Supprimer</a>

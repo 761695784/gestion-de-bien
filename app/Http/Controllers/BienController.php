@@ -11,7 +11,7 @@ class BienController extends Controller
     $biens = Bien::all();
     return view('biens.liste',compact('biens'));
    }
-   public function ajouter_bien ( ){
-    return view('biens/ajouter') ;
+   public function ajouter ( ){
+    return view('biens.ajouter') ;
   }
 }
