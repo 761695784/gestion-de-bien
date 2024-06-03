@@ -29,8 +29,8 @@
                             <p class="card-text" style="color: green"><u><strong>Publié le</strong></u> : {{$bien->DatePubli}} </p>
                           
                             <p class="card-text">{{ substr($bien->description, 0,100) }}</p>
-                            {{-- {{ route('details', $bien->id) }} --}}
-                        <a href="#" class="btn btn-info">Voir plus</a> <br> 
+                          
+                        <a href="   {{ route('details', $bien->id) }} " class="btn btn-info">Voir plus</a> <br> 
                         @if($bien->statut)
                         <span class="badge bg-success">Occupé</span>
                     @endif            

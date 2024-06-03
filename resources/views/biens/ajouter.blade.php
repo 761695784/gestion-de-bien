@@ -47,10 +47,10 @@
         <label for="nom" class="form-label">nom</label>
         <input type="text" class="form-control" name="nom" placeholder="Entrez le nom du bien">
       </div>
-      <select class="" aria-label="Default select example" >
+      <select class="" aria-label="Default select example" name="categorie" >
         <option selected> Choisir la catégorie</option>
-        <option value="1">luxe</option>
-        <option value="2">standard</option>
+        <option value="luxe">luxe</option>
+        <option value="standard">standard</option>
       </select>
       <div class="mb-3">
         <label for="Adresse" class="form-label">Adresse</label>
@@ -71,7 +71,7 @@
       
       <div class="mb-3">
         <label for="Description" class="form-label">Description des biens</label>
-        <textarea class="form-control"  name="Description" rows="3" placeholder="Entrez la description du bien" value="{{old('description')}}"></textarea>
+        <textarea class="form-control"  name="description" rows="3" placeholder="Entrez la description du bien"></textarea>
       </div>
       
       <button type="submit" class="btn btn-primary">Ajouter</button>

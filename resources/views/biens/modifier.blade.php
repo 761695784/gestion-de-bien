@@ -33,7 +33,7 @@
          
          
             <div class="mb-3">
-            <label for="image" class="form-label">Image de l'article</label>
+            <label for="image" class="form-label">Image du bien </label>
             <input class="form-control" type="string" name="image" value="{{$biens->image}}" >
           </div>
           <div class="mb-3">
@@ -56,20 +56,21 @@
             <input type="date" class="form-control" name="DatePubli" value="{{$biens->DatePubli}}"  >
           </div>
 
-          <div class="mb-3">
-            <label for="Description" class="form-label">Description</label>
-            <textarea class="form-control" name="description" rows="20" placeholder="Entrez la description de l'article" >{{$biens->description}} </textarea>
-          </div>
-
-        
 
           <div class="mb-3">
             <input type="checkbox" class="form-check-input" name="statut"    {{ $biens->statut ? 'checked' : '' }}>
             <label for="statut" class="form-check-label">Occupé</label>
         </div>
+          <div class="mb-3">
+            <label for="Description" class="form-label">Description</label>
+            <textarea class="form-control" name="description" rows="10" placeholder="Entrez la description de l'article" >{{$biens->description}} </textarea>
+          </div>
+
+        
+
 
           <button type="submit" class="btn btn-primary">Modifier</button>
-          <a href="/liste" class="btn btn-danger">Revenir a la liste des etudiants</a>
+          <a href="/liste" class="btn btn-danger">Revenir a la liste des biens</a>
         </form>
       
       </div>
