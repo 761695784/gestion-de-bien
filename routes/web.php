@@ -15,5 +15,7 @@ Route::get('/', function () {
 
 Route::get('/liste', [ BienController:: class,'liste' ]);
 
+
+
 // la route pour ajouter un bien
- Route::get('/ajouter',[BienController::class,'ajouter_bien']);
+ Route::get('/ajouter',[BienController::class,'ajouter']);
